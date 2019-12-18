@@ -41,7 +41,7 @@ Let's briefly go over what is happening in the `before` block that our tests wil
 before do
   @db = SQLite3::Database.new(':memory:')
   @sql_runner = SQLRunner.new(@db)
-  @sql_runner.execute_create_file
+  @sql_runner.execute_create_file 
 end
 ```
 Before each test two important things happen.
